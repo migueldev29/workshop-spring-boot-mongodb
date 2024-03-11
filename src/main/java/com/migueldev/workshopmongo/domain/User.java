@@ -18,6 +18,7 @@ public class User implements Serializable {
 	private String name;
 	private String email;
 	
+	//Definido que será apenas uma referência aos posts para não trazer o objeto inteiro, carregamento lazy = tardio.
 	@DBRef(lazy = true)
 	private List<Post> posts = new ArrayList<>();
 	
